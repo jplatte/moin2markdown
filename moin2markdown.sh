@@ -90,7 +90,7 @@ CLEANFILE=`echo $CLEANFILE | sed "s/(20)/ /g"`
 CLEANFILE=`echo $CLEANFILE | sed "s/(2f)/__/g"`
 
 # -
-CLEANFILE=`echo $CLEANFILE | sed "s/(2d)/'/g"`
+CLEANFILE=`echo $CLEANFILE | sed "s/(2d)/-/g"`
 
 echo "$PAGENAME > $CLEANFILE"
 mv "$WORKING/$PAGENAME.md" "$OUTPUT/$CLEANFILE.md"
