@@ -19,7 +19,6 @@ if [[ "$OUTPUT" == ""  ]]; then
 fi
 
 mkdir -p $WORKING
-mkdir -p $OUTPUT
 
 LATEST_REV=`ls $MOINROOT/data/pages/$PAGENAME/revisions | sort -r | head -n 1`
 cp $MOINROOT/data/pages/$PAGENAME/revisions/$LATEST_REV $WORKING/$PAGENAME.wiki
@@ -93,5 +92,5 @@ CLEANFILE=`echo $CLEANFILE | sed "s/(2f)/__/g"`
 CLEANFILE=`echo $CLEANFILE | sed "s/(2d)/-/g"`
 
 echo "$PAGENAME > $CLEANFILE"
-mv "$WORKING/$PAGENAME.md" "$OUTPUT/$CLEANFILE.md"
+mv "$WORKING/$PAGENAME.md" "$OUTPUT"
 rm -rf $WORKING
